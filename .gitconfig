@@ -1,0 +1,30 @@
+[user]
+	name = hokamoto
+	email = hokamoto@yahoo-corp.jp
+[push]
+    default = current
+[core]
+    editor = vim
+    attributesfile = /Users/hokamoto/.gitattributes_global
+    excludesfile = ~/.gitignore
+    pager = less -r
+[color]
+    ui = auto
+[alias]
+    ci = commit
+    co = checkout
+    br = branch
+    ba = branch -a
+    graph = log --graph --all --abbrev-commit --date=relative --pretty=format:'%C(red)%h %C(reset)-%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    cm = commit
+    st = status -sb
+[pull]
+    rebase = true
+[merge]
+	tool = vimdiff
+#	conflictstyle = diff3
+[diff "xlsx"]
+    binary = true
+    textconv = $GOPATH/bin/git-xlsx-textconv
+[diff "tika"]
+      textconv = /usr/local/bin/tika
